@@ -66,7 +66,7 @@ public class GoogleSearch2 {
         			// Find site names that contains 'ickey or 'isney,
         			//Some of the site names do not contain mickey, but they have disney/disneyland      
         			List<WebElement> links = driver.findElements
-        			(By.xpath("//div[h2[not(contains(text(),'People also ask'))]]//div[@class='r']//a[contains(.,'ickey')] | //div[h2[not(contains(text(),'People also ask'))]]//div[@class='r']//a[contains(.,'isney')]"));
+        			(By.xpath("//div[h2[not(contains(text(),'People also ask'))]]//div[@class='r']//a[contains(.,'ickey') or contains(.,'isney')]"));
         		   			// Add links text to array, and write them to console
         					for(WebElement el:links){
         					linksMickey.add(el.getAttribute("href"));	
